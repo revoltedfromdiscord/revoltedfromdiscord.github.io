@@ -6,7 +6,8 @@
 
 *If someone has refered you to that website, it's to tell you they've moved on*
 *to an alternative because they will not show their ID to Discord.*
-_**And they invite you to do the same**_
+_**And they invite you to do the same.**_
+*You may check their bio to find their new username and which platforms they're on.*
 
 > ## TL;DR - What should I do?
 > 
@@ -241,4 +242,5 @@ And for other platforms, you may find those websites useful:
 
 <!-- Today's date: 10th February of 2026  -->
 <!-- No, this document was not written by AI. Only the website was -->
+
 <!-- I did stole the CSS from https://soul.md/ though -->
