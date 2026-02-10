@@ -1,0 +1,169 @@
+/* style.css - Elegant serif variant for Markdown site */
+:root {
+	--text: #1a1a1a;
+	--text-muted: #666;
+	--bg: #fafafa;
+	--accent: #2a2a2a;
+	--border: #e0e0e0;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--text: #e8e8e8;
+		--text-muted: #999;
+		--bg: #111;
+		--accent: #fff;
+		--border: #333;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Source Serif 4', Georgia, serif;
+	background: var(--bg);
+	color: var(--text);
+	line-height: 1.7;
+	min-height: 100vh;
+}
+
+/* Main centered container */
+.main {
+	background: var(--bg);
+	color: var(--text);
+	padding: 4rem 2rem;
+	max-width: 680px;
+	margin: 0 auto;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Navigation */
+.main nav {
+	margin-bottom: 4rem;
+	font-family: 'Inter', sans-serif;
+	font-size: 1.1rem;
+	text-align: center;
+}
+
+.main nav a {
+	color: var(--text-muted);
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	transition: all 0.2s;
+}
+
+.main nav a:hover,
+.main nav a.active {
+	color: var(--text);
+	background: var(--border);
+	text-decoration: none;
+}
+
+/* Content area */
+#content {
+	flex: 1;
+}
+
+/* Markdown typography */
+#content h1 {
+	font-size: 2.5rem;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	margin-bottom: 0.5rem;
+	margin-top: 0;
+}
+
+#content h2 {
+	font-size: 1.1rem;
+	font-weight: 600;
+	margin: 3rem 0 1rem 0;
+	color: var(--text-muted);
+	font-family: 'Inter', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+#content h3 {
+	font-size: 1.3rem;
+	font-weight: 600;
+	margin: 2.5rem 0 1rem 0;
+}
+
+#content p {
+	margin-bottom: 1.5rem;
+	font-size: 1.125rem;
+}
+
+#content ul,
+#content ol {
+	margin: 1.5rem 0;
+	padding-left: 1.8rem;
+}
+
+#content li {
+	margin-bottom: 0.5rem;
+}
+
+#content a {
+	color: var(--text);
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+#content a:hover {
+	color: var(--text-muted);
+}
+
+#content blockquote {
+	border-left: 2px solid var(--border);
+	padding-left: 1.5rem;
+	margin: 2rem 0;
+	font-style: italic;
+	color: var(--text-muted);
+	font-size: 1.1rem;
+}
+
+#content hr {
+	border: none;
+	border-top: 1px solid var(--border);
+	margin: 3rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.main {
+		padding: 2rem 1.5rem;
+	}
+	
+	#content h1 {
+		font-size: 2rem;
+	}
+	
+	.main nav a {
+		display: inline-block;
+		padding: 0.4rem 0.8rem;
+		font-size: 1rem;
+	}
+}
+
+/* Loading/error states */
+#content:empty::before {
+	content: "Loading...";
+	color: var(--text-muted);
+	font-style: italic;
+}
+
+/* 404 page */
+.error-page h1 {
+	color: var(--text-muted);
+	font-size: 3rem;
+	margin-bottom: 1rem;
+	text-align: center;
+}
